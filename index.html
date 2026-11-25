@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文字数カウンター｜空白・改行を除いた文字数も計測 | もじメモ</title>
+<meta name="description" content="文章を貼るだけで文字数、空白・改行を除いた文字数、行数、400字詰め原稿用紙の換算枚数を計測。スマホで使える無料の日本語文字数カウンター。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="もじメモ｜無料の文字数カウンター">
+<meta property="og:description" content="文章を貼るだけで、空白・改行あり／なしの文字数をまとめて計測。">
+<link rel="stylesheet" href="./style.css">
+<script src="./counter.js" defer></script>
+</head>
+<body>
+<header><div class="wrap bar"><a class="brand" href="./"><span aria-hidden="true">文</span> もじメモ</a><nav aria-label="ページ内"><a href="#tool">カウンター</a><a href="#guide">数え方</a></nav></div></header>
+<main class="wrap">
+<section class="intro" aria-labelledby="title">
+<h1 id="title">文字数カウンター<span>。</span></h1>
+<p>文章を貼るだけ。空白や改行を除いた文字数も、まとめて確認できます。</p>
+</section>
+<section class="tool" id="tool" aria-label="文字数を計測">
+<div class="tool-head"><label for="draft">数えたい文章</label><button type="button" id="clear" disabled>クリア</button></div>
+<textarea id="draft" placeholder="ここに文章を入力、または貼り付け" aria-describedby="privacy" spellcheck="false"></textarea>
+<div class="stats">
+<div><output id="total" for="draft" aria-live="off">0</output><span>文字数</span></div>
+<div><output id="compact" for="draft" aria-live="off">0</output><span>空白・改行なし</span></div>
+<div><output id="lines" for="draft" aria-live="off">0</output><span>行数</span></div>
+<div><output id="sheets" for="draft" aria-live="off">0.00</output><span>原稿用紙換算（枚）</span></div>
+</div>
+</section>
+<p id="privacy" class="privacy">入力した文章は端末内で計算されます。このツールから外部には送信されません。</p>
+<section class="guide" id="guide">
+<h2>文字数の数え方</h2>
+<div class="answers">
+<article><h3>空白・改行は何文字？</h3><p>「文字数」は全角・半角の空白や改行も含めます。「空白・改行なし」では、空白、タブ、改行などを除いて数えます。たとえば「東京 大阪」は空白込みで5文字、空白を除くと4文字です。</p></article>
+<article><h3>400字詰め原稿用紙に換算する</h3><p>空白と改行を除いた文字数を400で割ります。たとえば1,000文字は約2.50枚です。実際に書くと段落の字下げや行末の空きで使用枚数が増えることがあります。</p></article>
+<article><h3>絵文字や行数はどう数える？</h3><p>対応ブラウザでは、家族の絵文字のように複数の要素からできた文字も、見た目のひとまとまりを1文字とします。行数は入力された改行を基準とし、画面幅による折り返しは含めません。提出先に独自のルールがある場合は、そのルールで確認してください。</p></article>
+</div>
+</section>
+</main>
+<footer><div class="wrap bar"><span>もじメモ</span><a href="./privacy.html">プライバシー</a></div></footer>
+</body>
+</html>

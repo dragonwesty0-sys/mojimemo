@@ -1,0 +1,9 @@
+# もじメモ
+
+日本語の文字数カウンター。HTML・CSS・JavaScriptの静的サイトです。ローカルではリポジトリのルートで `python3 -m http.server --directory .` を実行して確認できます。
+
+## Cloudflare Pages
+
+Git連携で新規リポジトリの `main` を本番ブランチに指定し、フレームワークはなし、ビルドコマンドは空欄、出力ディレクトリは `.` にします。公開URL確定後、各ページのcanonical、トップページのog:url、sitemap.xmlとrobots.txtのSitemap行を実URLで設定します。
+
+この初版に広告タグは入っていません。広告配信を導入する場合は、配信事業者の審査・設定に合わせてプライバシーページを更新します。
